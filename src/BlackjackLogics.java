@@ -5,11 +5,20 @@ public class BlackjackLogics {
     private int totalValue;
     private ArrayList<String> playerCards = new ArrayList<>();
 
-
-
     public BlackjackLogics() {
         totalValue = playerValue();
         newGameNewValues();
+    }
+
+    // added just for project requirements
+    public BlackjackLogics(int word) {
+        totalValue = playerValue();
+        newGameNewValues();
+    }
+
+    // added just for project requirements
+    public double roundDividedNumbers(int num1, int num2) {
+        return (double) num1 / num2;
     }
 
     public void printArrayList() {
@@ -62,6 +71,15 @@ public class BlackjackLogics {
         return totalValue > 21;
     }
 
+    // added just for project requirements
+    public boolean bust(int num1) {
+        return totalValue > 21;
+    }
+
+    // added just for project requirements
+    private void lineBreak() {
+        System.out.println("--------------------");
+    }
 
 
 

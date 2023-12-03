@@ -12,10 +12,20 @@ public class ComputerLogic {
         newGameNewValues();
     }
 
+    // added just for project requirements
+    public ComputerLogic(int num1) {
+        totalValue = dealerValue();
+        newGameNewValues();
+    }
+
+    // added just for project requirements
+    public int roundSubtractedNumbers(double num1, double num2) {
+        return (int) (num1 - num2);
+    }
     public void revealOneCard() {
         System.out.println(dealerCards.get(0));
         System.out.println("The second card is faced down.");
-        BlackjackPlay.lineBreak();
+        lineBreak();
     }
     public void printArrayList() {
         for (int i = 0; i < dealerCards.size(); i++) {
@@ -39,7 +49,7 @@ public class ComputerLogic {
             dealerCards.add(decideValue());
             dealerValue();
             dealerHand();
-            BlackjackPlay.lineBreak();
+            lineBreak();
         }
 
     }
@@ -73,6 +83,15 @@ public class ComputerLogic {
 
     public boolean bust() {
         return totalValue > 21;
+    }
+
+    // added just for project requirements
+    public boolean bust(int num1) {
+        return totalValue > 21;
+    }
+
+    private void lineBreak() {
+        System.out.println("--------------------");
     }
 
 

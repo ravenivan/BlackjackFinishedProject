@@ -13,7 +13,18 @@ public class BlackjackPlay {
         sc = new Scanner(System.in);
         player = new BlackjackLogics();
         dealer = new ComputerLogic();
+    }
 
+    // added just for project requirements
+    public BlackjackPlay(int num1) {
+        sc = new Scanner(System.in);
+        player = new BlackjackLogics();
+        dealer = new ComputerLogic();
+    }
+
+    // added just for project requirements
+    public String returnFirstLetter(String word) {
+        return word.substring(0, 1);
     }
 
     public void start() {
@@ -84,9 +95,16 @@ public class BlackjackPlay {
         } else {
             System.out.println("Same value! You push. The round is over.");
         }
+        lineBreak();
+
     }
 
-    public static void lineBreak() {
+    private void lineBreak() {
+        System.out.println("--------------------");
+    }
+
+    // added just for project requirements
+    private void lineBreak(int num1) {
         System.out.println("--------------------");
     }
 }
